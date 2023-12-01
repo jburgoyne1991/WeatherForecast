@@ -1,0 +1,35 @@
+﻿@model ResultViewModel
+@using WeatherForecast.Models;
+
+@{
+    ViewData["Title"] = "Weather";
+}
+
+<h1>Search City and Get Weather Forecast</h1>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forecast</title>
+</head>
+<body>
+
+    <!-- Form for Weather Result -->
+    <form action="/Weather/WeatherResult" method="Post">
+        <div>
+            <div class="form-row">
+                <div class="col-md-3 offset-md-3 form-group">
+                    <label>City:</label>
+                    <input type="text" class="form-control" name="city" value="@Model.City" />
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-6 offset-md-3">
+                    <button type="submit" class="btn btn-primary">Search City</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
