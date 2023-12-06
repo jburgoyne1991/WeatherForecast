@@ -48,11 +48,9 @@ namespace WeatherForecast.Controllers
         [HttpPost]
         public async Task <IActionResult> WeatherDetail(string City)
         {
-
-            //Assign API KEY which received from OPENWEATHERMAP.ORG  
+ 
             string appId = "9133b4eede5ea0251184093bbfb318ef";
-
-            //API path with CITY parameter and other parameters.  
+  
             string url = string.Format("http://api.openweathermap.org/data/2.5/weather?q={0}&units=metric&cnt=1&APPID={1}", City, appId);
 
             ResultViewModel result = new ResultViewModel();
@@ -82,49 +80,5 @@ namespace WeatherForecast.Controllers
                 return View("WeatherResult", result);
             }
         }
-
     }
 }
-
-/*using System;
-using System.Net.Http;
-using System.Threading.Tasks;
-
-class Program
-{
-    static async Task Main()
-    {
-        await MakeApiCall();
-    }
-
-    static async Task MakeApiCall()
-    {
-        try
-        {
-            using (HttpClient httpClient = new HttpClient())
-            {
-                // Replace "YOUR_API_URL" with the actual URL of the API you want to call
-                string apiUrl = "YOUR_API_URL";
-
-                // Send the GET request
-                HttpResponseMessage response = await httpClient.GetAsync(apiUrl);
-
-                // Check if the request was successful (status code 200-299)
-                if (response.IsSuccessStatusCode)
-                {
-                    // Read and print the content of the response
-                    string responseContent = await response.Content.ReadAsStringAsync();
-                    Console.WriteLine("API Response:");
-                    Console.WriteLine(responseContent);
-                }
-                else
-                {
-                    // Handle error responses
-                    Console.WriteLine($"Error: {response.StatusCode} - {response.ReasonPhrase}");
-                }
-            }
-        }
-        catch (Exception ex)
-        {
-            // Handle exceptions
-            Console.WriteLine($"Exception: {ex.Message}");*/
