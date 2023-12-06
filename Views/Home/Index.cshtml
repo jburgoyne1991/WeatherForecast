@@ -16,12 +16,12 @@
 <body>
 
     <!-- Form for Weather Result -->
-    <form action="/Weather/WeatherResult" method="Post">
+    <form action="~/Home/WeatherDetail" method="post">
         <div>
             <div class="form-row">
                 <div class="col-md-3 offset-md-3 form-group">
                     <label>City:</label>
-                    <input type="text" class="form-control" name="city" value="@Model.City" />
+                    <input type="text" class="form-control" name="city"/>
                 </div>
             </div>
             <div class="form-row">

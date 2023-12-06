@@ -11,7 +11,7 @@ using Newtonsoft.Json;
 
 namespace WeatherForecast.Controllers
 {
-    public class WeatherController : Controller
+    public class HomeController : Controller
     {
 
         public ActionResult Weather()

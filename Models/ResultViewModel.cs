@@ -38,10 +38,10 @@ namespace WeatherForecast.Models
     {
         public double temp { get; set; }
         public double feels_like { get; set; }
-        public int temp_min { get; set; }
-        public int temp_max { get; set;}
-        public int pressure { get; set; }
-        public int humidity { get; set; }
+        public double temp_min { get; set; }
+        public double temp_max { get; set; }
+        public double pressure { get; set; }
+        public double humidity { get; set; }
     }
 
     public class Wind
